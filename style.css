@@ -27,4 +27,6 @@ header h1{
 }
 canvas{
     z-index: 1;
+    width:50%;
+    float:right;
 }

@@ -5,7 +5,7 @@ init();
 
 function init() {
 
-	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
+	camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight / 2, 0.01, 10 );
 	camera.position.z = 1;
 
 	scene = new THREE.Scene();
@@ -17,7 +17,7 @@ function init() {
 	scene.add( mesh );
 
 	renderer = new THREE.WebGLRenderer( { antialias: true } );
-	renderer.setSize( window.innerWidth, window.innerHeight );
+	renderer.setSize( window.innerWidth / 2, window.innerHeight);
 	renderer.setAnimationLoop( animation );
 	document.body.appendChild( renderer.domElement );
 
@@ -29,5 +29,16 @@ function animation( time ) {
 	mesh.rotation.y = time / 1000;
 
 	renderer.render( scene, camera );
+
+}
+
+window.addEventListener( 'resize', onWindowResize, false );
+
+function onWindowResize(){
+
+    camera.aspect = window.innerWidth / window.innerHeight / 2;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth / 2, window.innerHeight );
 
 }
