@@ -1,0 +1,30 @@
+:root{
+    --maize-crayola: #eec643ff;
+    --eerie-black: #141414ff;
+    --cultured: #eef0f2ff;
+    --blue-pantone: #0d21a1ff;
+    --oxford-blue: #011638ff;
+}
+body{
+    margin:0;
+}
+main{
+    background-color: var(--cultured);
+    width:50%;
+    height: 100%;
+    margin: auto;
+    z-index: 5;
+    top:0;
+    position:fixed;
+}
+header{
+    background-color: var(--eerie-black);
+    padding: 20px;
+}
+header h1{
+    text-align: center;
+    color:var(--maize-crayola);
+}
+canvas{
+    z-index: 1;
+}
