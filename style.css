@@ -30,3 +30,30 @@ canvas{
     width:50%;
     float:right;
 }
+section{
+    color: var(--cultured);
+    padding:0;
+    width:100%;
+}
+section h2{
+    background-color: var(--blue-pantone);
+    padding: 10px;
+    margin:0;
+}
+section p,section ul{
+    background-color: var(--oxford-blue);
+    padding: 5px;
+    margin:0;
+}
+section a{
+    text-decoration: none;
+}
+footer{
+    width:100%;
+    clear:both;
+    z-index: 10;
+    background-color: var(--eerie-black);
+    color: var(--cultured);
+    position:fixed;
+    bottom: 0;
+}
